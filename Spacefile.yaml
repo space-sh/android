@@ -16,33 +16,45 @@
 
 _dep_install:
     _info:
-        title: Install dependencies.
+        title: Install dependencies
     _env:
         - CMD: ANDROID_DEP_INSTALL
 
 _info:
-    title: Manage an Android device's filesystem.
+    title: Android module
+    desc:|
+        Manages an Android device's filesystem
 
 camera:
+    _info:
+        title: Android camera
+        desc:|
+            Manages Android camera directory
     ls:
         _info:
-            title: List all photos in the camera directory.
+            title: List all photos in the camera directory
         _env:
             - CMD: ANDROID_CAMERA_LS
     targz:
         _info:
-            title: tar.gz all camera photos, to stdout.
+            title: Stream all photos to stdout
             desc: |
+                tar.gz all camera photos to stdout
                 If stdout is a terminal, this command will abort.
         _env:
             - CMD: ANDROID_CAMERA_TARGZ
 
 sms:
+    _info:
+        title: Android SMS
+        desc:|
+            Manages Android SMS/MMS data
     ls:
         _info:
             title: List all SMS/MMS text messages on phone.
             desc: |
                 This requires that the app we are running in (tmux, sshdroid, etc)
-                has these priviligies.
+                has these privileges.
         _env:
             - CMD: /data/data/com.android.providers/telephony/databases/mmssms.db
+

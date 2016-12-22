@@ -16,6 +16,15 @@
 
 clone os
 
+#=============
+# ANDROID_DEP_INSTALL
+#
+# Check for OS dependencies
+#
+# Returns:
+# non-zero on failure
+#
+#=============
 ANDROID_DEP_INSTALL ()
 {
     SPACE_CMDDEP="OS_IS_INSTALLED PRINT"
@@ -32,6 +41,15 @@ ANDROID_DEP_INSTALL ()
     fi
 }
 
+#=============
+# ANDROID_CAMERA_LS
+#
+# List Android camera directory
+#
+# Parameters:
+#   $1: directory path. Defaults to /storage/emulated/0/DCIM/Camera/
+#
+#=============
 ANDROID_CAMERA_LS ()
 {
     SPACE_SIGNATURE="[dir]"
@@ -41,6 +59,16 @@ ANDROID_CAMERA_LS ()
     ls "${dir}"
 }
 
+#=============
+# ANDROID_CAMERA_TARGZ
+#
+# Generate a compressed tar file
+# containing Android camera files
+#
+# Parameters:
+#   $1: directory path. Defaults to /storage/emulated/0/DCIM/Camera/
+#
+#=============
 ANDROID_CAMERA_TARGZ ()
 {
     SPACE_SIGNATURE="[dir]"
@@ -57,3 +85,4 @@ ANDROID_CAMERA_TARGZ ()
     echo $dir >&2
     cd "${dir}" && tar -cvz .
 }
+
