@@ -82,7 +82,7 @@ ANDROID_CAMERA_TARGZ ()
         return 1
     fi
 
-    echo $dir >&2
+    echo "$dir" >&2
     cd "${dir}" && tar -cvz .
 }
 
