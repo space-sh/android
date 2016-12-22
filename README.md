@@ -17,6 +17,7 @@ Manages an Android device's filesystem
 	Manages Android SMS/MMS data
 
 + ls
+
 # Functions 
 
 ## ANDROID\_DEP\_INSTALL ()  
