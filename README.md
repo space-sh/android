@@ -24,7 +24,7 @@ Manages an Android device's filesystem
   
   
   
-Check for OS dependencies  
+Check for module dependencies  
   
 ### Returns:  
 - non-zero on failure  

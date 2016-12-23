@@ -19,7 +19,7 @@ clone os
 #=============
 # ANDROID_DEP_INSTALL
 #
-# Check for OS dependencies
+# Check for module dependencies
 #
 # Returns:
 # non-zero on failure
@@ -29,7 +29,7 @@ ANDROID_DEP_INSTALL ()
 {
     SPACE_CMDDEP="OS_IS_INSTALLED PRINT"
 
-    PRINT "Checking for OS dependencies." "info"
+    PRINT "Checking for module dependencies." "info"
 
     OS_IS_INSTALLED "tar" "tar"
 
