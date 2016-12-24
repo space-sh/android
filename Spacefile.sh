@@ -29,7 +29,7 @@ clone os
 #=============
 ANDROID_DEP_INSTALL ()
 {
-    SPACE_CMDDEP="OS_IS_INSTALLED PRINT"
+    SPACE_CMDDEP="OS_IS_INSTALLED PRINT"    # shellcheck disable=SC2034
 
     PRINT "Checking for module dependencies." "info"
 
@@ -54,7 +54,7 @@ ANDROID_DEP_INSTALL ()
 #=============
 ANDROID_CAMERA_LS ()
 {
-    SPACE_SIGNATURE="[dir]"
+    SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
     local dir="${1:-/storage/emulated/0/DCIM/Camera/}"
     shift $(( $# > 0 ? 1 : 0 ))
 
@@ -73,8 +73,8 @@ ANDROID_CAMERA_LS ()
 #=============
 ANDROID_CAMERA_TARGZ ()
 {
-    SPACE_SIGNATURE="[dir]"
-    SPACE_CMDDEP="PRINT"
+    SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
+    SPACE_CMDDEP="PRINT"        # shellcheck disable=SC2034
 
     local dir="${1:-/storage/emulated/0/DCIM/Camera/}"
     shift $(( $# > 0 ? 1 : 0 ))
