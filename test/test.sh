@@ -22,7 +22,7 @@ _TEST_ANDROID_CAMERA_LS_WORKS()
 
     ANDROID_CAMERA_LS "$1" > /dev/null 2>&1
     if [ "$?" -eq 0 ]; then
-        PRINT "OK" "success"
+        PRINT "OK" "ok"
     else
         PRINT "Failed" "error"
     fi
@@ -34,7 +34,7 @@ _TEST_ANDROID_CAMERA_LS_FAILS()
     SPACE_CMDDEP="ANDROID_CAMERA_LS PRINT"
     ANDROID_CAMERA_LS "$1" > /dev/null 2>&1
     if [ "$?" -ne 0 ]; then
-        PRINT "OK: expected failure" "success"
+        PRINT "OK: expected failure" "ok"
         exit 0
     else
         PRINT "Failed" "error"
@@ -47,7 +47,7 @@ _TEST_ANDROID_CAMERA_TARGZ_WORKS()
     SPACE_CMDDEP="ANDROID_CAMERA_TARGZ PRINT"
     ANDROID_CAMERA_TARGZ "$1" > ./test_file.tar.gz > /dev/null 2>&1
     if [ "$?" -eq 0 ]; then
-        PRINT "OK" "success"
+        PRINT "OK" "ok"
         exit 0
     else
         PRINT "Failed" "error"
@@ -64,7 +64,7 @@ _TEST_TARGZ_FILE_EXISTS()
     if [ -f "$_expected_file_name" ]; then
         PRINT "removing"
         rm "./$_expected_file_name"
-        PRINT "OK" "success"
+        PRINT "OK" "ok"
         exit 0
     else
         PRINT "Expected to find file $_expected_file_name " "error"
@@ -77,7 +77,7 @@ _TEST_ANDROID_CAMERA_TARGZ_TERMINAL_STDOUT()
     SPACE_CMDDEP="ANDROID_CAMERA_TARGZ PRINT"
     ANDROID_CAMERA_TARGZ "$1" > /dev/null 2>&1
     if [ "$?" -ne 0 ]; then
-        PRINT "OK: STDOUT is terminal failure" "success"
+        PRINT "OK: STDOUT is terminal failure" "ok"
         exit 0
     else
         PRINT "Failed" "error"
@@ -92,7 +92,7 @@ _TEST_TARGZ_FILE_DOES_NOT_EXIST()
     local _expected_file_name="$1"
     local _extract_exit_code=
     if [ ! -f "$_expected_file_name" ]; then
-        PRINT "OK" "success"
+        PRINT "OK" "ok"
         exit 0
     else
         PRINT "Did not expect to find file $_expected_file_name " "error"
