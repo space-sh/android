@@ -18,7 +18,7 @@ _source "${DIR}/../Spacefile.sh"
 
 _TEST_ANDROID_CAMERA_LS_WORKS()
 {
-    SPACE_CMDDEP="ANDROID_CAMERA_LS PRINT"
+    SPACE_DEP="ANDROID_CAMERA_LS PRINT"
 
     ANDROID_CAMERA_LS "$1" > /dev/null 2>&1
     if [ "$?" -eq 0 ]; then
@@ -31,7 +31,7 @@ _TEST_ANDROID_CAMERA_LS_WORKS()
 
 _TEST_ANDROID_CAMERA_LS_FAILS()
 {
-    SPACE_CMDDEP="ANDROID_CAMERA_LS PRINT"
+    SPACE_DEP="ANDROID_CAMERA_LS PRINT"
     ANDROID_CAMERA_LS "$1" > /dev/null 2>&1
     if [ "$?" -ne 0 ]; then
         PRINT "OK: expected failure" "ok"
@@ -44,7 +44,7 @@ _TEST_ANDROID_CAMERA_LS_FAILS()
 
 _TEST_ANDROID_CAMERA_TARGZ_WORKS()
 {
-    SPACE_CMDDEP="ANDROID_CAMERA_TARGZ PRINT"
+    SPACE_DEP="ANDROID_CAMERA_TARGZ PRINT"
     ANDROID_CAMERA_TARGZ "$1" > ./test_file.tar.gz > /dev/null 2>&1
     if [ "$?" -eq 0 ]; then
         PRINT "OK" "ok"
@@ -57,7 +57,7 @@ _TEST_ANDROID_CAMERA_TARGZ_WORKS()
 
 _TEST_TARGZ_FILE_EXISTS()
 {
-    SPACE_CMDDEP="PRINT"
+    SPACE_DEP="PRINT"
 
     local _expected_file_name="$1"
     local _extract_exit_code=
@@ -74,7 +74,7 @@ _TEST_TARGZ_FILE_EXISTS()
 
 _TEST_ANDROID_CAMERA_TARGZ_TERMINAL_STDOUT()
 {
-    SPACE_CMDDEP="ANDROID_CAMERA_TARGZ PRINT"
+    SPACE_DEP="ANDROID_CAMERA_TARGZ PRINT"
     ANDROID_CAMERA_TARGZ "$1" > /dev/null 2>&1
     if [ "$?" -ne 0 ]; then
         PRINT "OK: STDOUT is terminal failure" "ok"
@@ -87,7 +87,7 @@ _TEST_ANDROID_CAMERA_TARGZ_TERMINAL_STDOUT()
 
 _TEST_TARGZ_FILE_DOES_NOT_EXIST()
 {
-    SPACE_CMDDEP="PRINT"
+    SPACE_DEP="PRINT"
 
     local _expected_file_name="$1"
     local _extract_exit_code=
