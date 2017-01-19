@@ -22,7 +22,7 @@ _info:
         they might wreak havoc on your system.
         TestRunner module wraps the tests properly.
 _env:
-    - CMD: ${_SPACEBIN} -m testrunner /run/ -- -- @{DIR}/test.yaml
+    - RUN: ${_SPACEBIN} -m testrunner /run/ -- -- @{DIR}/test.yaml
 
 
 _platforms:
@@ -44,39 +44,38 @@ _tests:
             _info:
                 title: Check that LS works
             _env:
-                - CMD: _TEST_ANDROID_CAMERA_LS_WORKS -- "."
+                - RUN: _TEST_ANDROID_CAMERA_LS_WORKS -- "."
         -
             _info:
                 title: Check that LS fails
             _env:
-                - CMD: _TEST_ANDROID_CAMERA_LS_FAILS -- "./some_bad/path/action"
+                - RUN: _TEST_ANDROID_CAMERA_LS_FAILS -- "./some_bad/path/action"
     -
         # Test 1 - Camera targz
         -
             _info:
                 title: Check that TARGZ works
             _env:
-                - CMD: _TEST_ANDROID_CAMERA_TARGZ_WORKS -- "/root"
+                - RUN: _TEST_ANDROID_CAMERA_TARGZ_WORKS -- "/root"
         -
             _info:
                 title: Check that expected TARGZ file has been created and then remove it
             _env:
-                - CMD: _TEST_TARGZ_FILE_EXISTS -- "./test_file.tar.gz"
+                - RUN: _TEST_TARGZ_FILE_EXISTS -- "./test_file.tar.gz"
         -
             _info:
                 title: Check that TARGZ creation fails
             _env:
-                - CMD: _TEST_ANDROID_CAMERA_TARGZ_TERMINAL_STDOUT -- "./some_bad/path/action"
+                - RUN: _TEST_ANDROID_CAMERA_TARGZ_TERMINAL_STDOUT -- "./some_bad/path/action"
         -
             _info:
                 title: Check that TARGZ file has NOT been created again
             _env:
-                - CMD: _TEST_TARGZ_FILE_DOES_NOT_EXIST -- "./test_file.tar.gz"
+                - RUN: _TEST_TARGZ_FILE_DOES_NOT_EXIST -- "./test_file.tar.gz"
 
 _clean:
     _info:
         title: Do nothing.
     _env:
-        - CMDWRAP: !unset
-        - CMD: ":"
-
+        - SPACE_WRAP: !unset
+        - RUN: ":"

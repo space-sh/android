@@ -18,7 +18,7 @@ _dep_install:
     _info:
         title: Install dependencies
     _env:
-        - CMD: ANDROID_DEP_INSTALL
+        - RUN: ANDROID_DEP_INSTALL
 
 _info:
     title: Android module
@@ -34,7 +34,7 @@ camera:
         _info:
             title: List all photos in the camera directory
         _env:
-            - CMD: ANDROID_CAMERA_LS
+            - RUN: ANDROID_CAMERA_LS
     targz:
         _info:
             title: Stream all photos to stdout
@@ -42,7 +42,7 @@ camera:
                 tar.gz all camera photos to stdout
                 If stdout is a terminal, this command will abort.
         _env:
-            - CMD: ANDROID_CAMERA_TARGZ
+            - RUN: ANDROID_CAMERA_TARGZ
 
 sms:
     _info:
@@ -56,5 +56,4 @@ sms:
                 This requires that the app we are running in (tmux, sshdroid, etc)
                 has these privileges.
         _env:
-            - CMD: /data/data/com.android.providers/telephony/databases/mmssms.db
-
+            - RUN: /data/data/com.android.providers/telephony/databases/mmssms.db
