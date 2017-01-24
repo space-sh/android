@@ -39,7 +39,7 @@ _tests:
     -
         # Test 0 - Camera ls
         -
-            @include: @{DIR}/../Spacefile.yaml|/_dep_install
+            @include: @{DIR}/../Spacefile.yaml|/_dep_install/
         -
             _info:
                 title: Check that LS works
