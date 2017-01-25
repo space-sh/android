@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-clone os
-
-
 # Disable warning about indirectly checking status code
 # shellcheck disable=SC2181
 
@@ -29,7 +26,7 @@ clone os
 # non-zero on failure
 #
 #=============
-ANDROID_DEP_INSTALL ()
+ANDROID_DEP_INSTALL()
 {
     SPACE_DEP="OS_IS_INSTALLED PRINT"    # shellcheck disable=SC2034
 
@@ -54,7 +51,7 @@ ANDROID_DEP_INSTALL ()
 #   $1: directory path. Defaults to /storage/emulated/0/DCIM/Camera/
 #
 #=============
-ANDROID_CAMERA_LS ()
+ANDROID_CAMERA_LS()
 {
     SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
     local dir="${1:-/storage/emulated/0/DCIM/Camera/}"
@@ -73,7 +70,7 @@ ANDROID_CAMERA_LS ()
 #   $1: directory path. Defaults to /storage/emulated/0/DCIM/Camera/
 #
 #=============
-ANDROID_CAMERA_TARGZ ()
+ANDROID_CAMERA_TARGZ()
 {
     SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
     SPACE_DEP="PRINT"           # shellcheck disable=SC2034

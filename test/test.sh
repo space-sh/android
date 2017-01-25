@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-_source "${DIR}/../Spacefile.sh"
-
 _TEST_ANDROID_CAMERA_LS_WORKS()
 {
     SPACE_DEP="ANDROID_CAMERA_LS PRINT"
