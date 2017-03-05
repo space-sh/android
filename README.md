@@ -3,10 +3,12 @@
 Manages an Android device's filesystem
 
 
+
 ## /camera/
 	Android camera
 
 	Manages Android camera directory
+	
 
 + ls
 + targz
@@ -15,12 +17,13 @@ Manages an Android device's filesystem
 	Android SMS
 
 	Manages Android SMS/MMS data
+	
 
 + ls
 
 # Functions 
 
-## ANDROID\_DEP\_INSTALL ()  
+## ANDROID\_DEP\_INSTALL()  
   
   
   
@@ -31,7 +34,7 @@ Check for module dependencies
   
   
   
-## ANDROID\_CAMERA\_LS ()  
+## ANDROID\_CAMERA\_LS()  
   
   
   
@@ -42,7 +45,7 @@ List Android camera directory
   
   
   
-## ANDROID\_CAMERA\_TARGZ ()  
+## ANDROID\_CAMERA\_TARGZ()  
   
   
   
