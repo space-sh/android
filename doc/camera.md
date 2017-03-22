@@ -1,4 +1,5 @@
 ---
+modulename: Android
 title: /camera/
 giturl: gitlab.com/space-sh/android
 weight: 200
@@ -7,8 +8,9 @@ weight: 200
 
 Manages Android camera operations.
 
+
 ## ls
-Lists all the camera data on an Android devive.
+Lists all the camera data on an Android device.
 
 ### Example
 
@@ -34,14 +36,24 @@ Output:
 20160611_145921.jpg     20160801_090215.jpg   
 ```
 
+Listing from a custom directory:
+```sh
+space -m android /camera/ls/ -- "/storage/emulated/mycustom/directory"
+```
+
 ## targz
 
-Compresses all photos into a new archive.
+Compresses all photos into a new `tar` file.
 
 ### Example
-Creating a new archive:
+Creating a new archive containing all camera data:
 ```sh
 space -m android /camera/targz/
+```
+
+Creating a new archive reading data from custom directory:
+```sh
+space -m android /camera/targz/ -- "/storage/emulated/mycustom/directory"
 ```
 
 Exit status code is expected to be 0 on success.
