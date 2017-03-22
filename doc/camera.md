@@ -34,12 +34,13 @@ Output:
 20160610_125928.jpg     20160731_195920.jpg     20161129_133135.mp4             
 20160610_125948.jpg     20160731_204017.jpg     20161129_133158.mp4             
 20160611_145921.jpg     20160801_090215.jpg   
-```
+```  
 
-Listing from a custom directory:
+Alternatively, it is possible to list a custom directory:
 ```sh
 space -m android /camera/ls/ -- "/storage/emulated/mycustom/directory"
 ```
+
 
 ## targz
 
@@ -51,7 +52,7 @@ Creating a new archive containing all camera data:
 space -m android /camera/targz/
 ```
 
-Creating a new archive reading data from custom directory:
+Alternatively, it is possible to read data from a custom directory:
 ```sh
 space -m android /camera/targz/ -- "/storage/emulated/mycustom/directory"
 ```
