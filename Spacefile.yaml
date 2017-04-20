@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 ---
-@clone: os
+_clone:
+    @clone: os
+    @include: os|/_clone/
+@include: |/_clone/
 
 _dep_install:
     _info:
@@ -24,39 +27,27 @@ _dep_install:
 
 _info:
     title: Android module
-    desc:|
+    desc: |
         Manages an Android device's filesystem
+        to download photos from it over SSH.
 
-camera:
-    _info:
-        title: Android camera
-        desc:|
-            Manages Android camera directory
-    ls:
+photos:
+    camera:
         _info:
-            title: List all photos in the camera directory
-        _env:
-            - RUN: ANDROID_CAMERA_LS
-    targz:
-        _info:
-            title: Stream all photos to stdout
+            title: Access Android camera photos
             desc: |
-                tar.gz all camera photos to stdout
-                If stdout is a terminal, this command will abort.
-        _env:
-            - RUN: ANDROID_CAMERA_TARGZ
-
-sms:
-    _info:
-        title: Android SMS
-        desc:|
-            Manages Android SMS/MMS data
-    ls:
-        _info:
-            title: List all SMS/MMS text messages on phone.
-            desc: |
-                This requires that the app we are running in (tmux, sshdroid, etc)
-                has these privileges.
-        _env:
-            - RUN: /data/data/com.android.providers/telephony/databases/mmssms.db
+                Manages Android camera directory
+        ls:
+            _info:
+                title: List all photos in the camera directory
+            _env:
+                - RUN: ANDROID_CAMERA_LS
+        targz:
+            _info:
+                title: Stream all camera photos to stdout as tar.gz archive
+                desc: |
+                    tar.gz all camera photos to stdout
+                    If stdout is a terminal, this command will abort.
+            _env:
+                - RUN: ANDROID_CAMERA_TARGZ
 ...
