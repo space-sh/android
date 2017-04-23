@@ -16,7 +16,7 @@ Lists all the camera data on an Android device.
 
 Listing all photos:
 ```sh
-space -m android /camera/ls/
+space -m android /photos/camera/ls/
 ```
 
 Output:
@@ -38,7 +38,7 @@ Output:
 
 Alternatively, it is possible to list a custom directory:
 ```sh
-space -m android /camera/ls/ -- "/storage/emulated/mycustom/directory"
+space -m android /photos/camera/ls/ -- "/storage/emulated/mycustom/directory"
 ```
 
 
@@ -49,12 +49,12 @@ Compresses all photos into a new `tar` file.
 ### Example
 Creating a new archive containing all camera data:
 ```sh
-space -m android /camera/targz/
+space -m android /photos/camera/targz/
 ```
 
 Alternatively, it is possible to read data from a custom directory:
 ```sh
-space -m android /camera/targz/ -- "/storage/emulated/mycustom/directory"
+space -m android /photos/camera/targz/ -- "/storage/emulated/mycustom/directory"
 ```
 
 Exit status code is expected to be 0 on success.
