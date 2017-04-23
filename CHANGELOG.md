@@ -1,6 +1,6 @@
 # Space Module change log - android
 
-## [current]
+## [1.0.1 - 2017-04-23]
 
 * Move camera node below photos node
 
