@@ -54,6 +54,7 @@ ANDROID_DEP_INSTALL()
 ANDROID_CAMERA_LS()
 {
     SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
+    # shellcheck disable=SC2039
     local dir="${1:-/storage/emulated/0/DCIM/Camera/}"
     shift $(( $# > 0 ? 1 : 0 ))
 
@@ -75,6 +76,7 @@ ANDROID_CAMERA_TARGZ()
     SPACE_SIGNATURE="[dir]"     # shellcheck disable=SC2034
     SPACE_DEP="PRINT"           # shellcheck disable=SC2034
 
+    # shellcheck disable=SC2039
     local dir="${1:-/storage/emulated/0/DCIM/Camera/}"
     shift $(( $# > 0 ? 1 : 0 ))
 
