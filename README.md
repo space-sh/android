@@ -1,25 +1,14 @@
 # Android module | [![build status](https://gitlab.com/space-sh/android/badges/master/build.svg)](https://gitlab.com/space-sh/android/commits/master)
 
 Manages an Android device's filesystem
+to download photos from it over SSH.
 
 
 
-## /camera/
-	Android camera
-
-	Manages Android camera directory
+## /photos/
 	
 
-+ ls
-+ targz
-
-## /sms/
-	Android SMS
-
-	Manages Android SMS/MMS data
-	
-
-+ ls
++ camera
 
 # Functions 
 
