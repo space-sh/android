@@ -2,6 +2,7 @@
 modulename: Android
 title: /camera/
 giturl: gitlab.com/space-sh/android
+editurl: /edit/master/doc/camera.md
 weight: 200
 ---
 # Android module: Camera
