@@ -1,5 +1,10 @@
 # Space Module change log - android
 
+## [1.0.4 - 2020-02-19]
+
+* Update documentation
+
+
 ## [1.0.3 - 2017-06-11]
 
 * Update Arch Linux image for CI tests
