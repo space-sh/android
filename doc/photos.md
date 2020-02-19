@@ -1,11 +1,11 @@
 ---
 modulename: Android
-title: /camera/
+title: /photos/
 giturl: gitlab.com/space-sh/android
-editurl: /edit/master/doc/camera.md
+editurl: /edit/master/doc/photos
 weight: 200
 ---
-# Android module: Camera
+# Android module: Camera photos
 
 Manages Android camera operations.
 
